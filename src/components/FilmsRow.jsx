@@ -68,8 +68,9 @@ class FilmsRow extends Component {
                //  flex-nowrap overflow-scroll
             >
                {this.state.movies &&
-                  this.state.movies.map((movie, index) => {
-                     if (index < 6) {
+                  this.state.movies
+                     .filter((movie, index) => index < 6)
+                     .map((movie) => {
                         return (
                            <SingleMovieComp
                               key={movie.imdbID}
@@ -77,8 +78,7 @@ class FilmsRow extends Component {
                               alt={movie.Title}
                            />
                         );
-                     }
-                  })}
+                     })}
             </Row>
          </Container>
       );
