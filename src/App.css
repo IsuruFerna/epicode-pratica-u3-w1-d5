@@ -1,8 +1,13 @@
+html,
+body {
+   height: 30vh !important;
+}
+
 body {
    background-color: #221f1f;
    margin-top: 0;
    padding-top: 0;
-   position: relative;
+   /* position: relative; */
 }
 
 .text-white-50:hover {
